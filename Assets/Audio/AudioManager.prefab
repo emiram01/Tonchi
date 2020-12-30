@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1555307673853244757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8230598990069375921}
+  - component: {fileID: 4245213294313295978}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8230598990069375921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555307673853244757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4245213294313295978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555307673853244757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa037685acbc3845a252371f9a68fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Meow
+    clip: {fileID: 8300000, guid: 3567cb190df593d409397c553230c690, type: 3}
+    volume: 0.483
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Fireball
+    clip: {fileID: 8300000, guid: a6cd13f7d044775458c0401b7218b817, type: 3}
+    volume: 0.1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: LHook
+    clip: {fileID: 8300000, guid: 1641d0fbc9f4ef049a5d0192eddd2d84, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RHook
+    clip: {fileID: 8300000, guid: 27a16f4add94a974898bb29493d1712c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kick
+    clip: {fileID: 8300000, guid: 82239bdd14b03ad43be05b6659de7128, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UpperCut
+    clip: {fileID: 8300000, guid: 5986cbcd7704a004b93865cb3203e2fa, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HeadDecap
+    clip: {fileID: 8300000, guid: a80776ec553f88a4f8d4e6b59907379c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Heal
+    clip: {fileID: 8300000, guid: b844f04178adfea47939206cabb0a804, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Slice
+    clip: {fileID: 8300000, guid: 3fcd0fe5370b18447bd538adf75dd2d8, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Chat
+    clip: {fileID: 8300000, guid: addd7fddfcd010e42b29a33a3f895eba, type: 3}
+    volume: 0.2
+    pitch: 2
+    loop: 0
+    source: {fileID: 0}
+  - name: Checkpoint
+    clip: {fileID: 8300000, guid: 20a42b24e0f831348ba5a442e5682754, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ZergBossFireball
+    clip: {fileID: 8300000, guid: 96f29629c6e6c164ba6a3691be0e2279, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TonchiFireball
+    clip: {fileID: 8300000, guid: c6916561a61824d4691190addac62935, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Woosh
+    clip: {fileID: 8300000, guid: 413002899d0e35742a168cb45c280813, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DoorClose
+    clip: {fileID: 8300000, guid: d87cde3103ac6754caf2785fb7c32dad, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DoorOpen
+    clip: {fileID: 8300000, guid: 916d3e41fabc2fe469664cca882ce02b, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

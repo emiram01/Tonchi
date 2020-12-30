@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: 3d4ebb640df201d47a1adf63d7d83ac6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 788353688622178650
+    second: tonchitilegrassmap_0
+  - first:
+      213: -5602349889701511455
+    second: tonchitilegrassmap_1
+  - first:
+      213: 8207691953815996437
+    second: tonchitilegrassmap_2
+  - first:
+      213: 5097987141092573603
+    second: tonchitilegrassmap_3
+  - first:
+      213: -1197212622112342198
+    second: tonchitilegrassmap_4
+  - first:
+      213: -4791658423265251136
+    second: tonchitilegrassmap_5
+  - first:
+      213: -1312627934111059481
+    second: tonchitilegrassmap_6
+  - first:
+      213: 7064567795700277403
+    second: tonchitilegrassmap_7
+  - first:
+      213: 5025411414616895300
+    second: tonchitilegrassmap_8
+  - first:
+      213: 4499498012075875369
+    second: tonchitilegrassmap_9
+  - first:
+      213: 2919586439718981636
+    second: tonchitilegrassmap_10
+  - first:
+      213: -2814978264617348575
+    second: tonchitilegrassmap_11
+  - first:
+      213: -2763585555918175015
+    second: tonchitilegrassmap_12
+  - first:
+      213: 3410133161622030680
+    second: tonchitilegrassmap_13
+  - first:
+      213: 5228896007085107424
+    second: tonchitilegrassmap_14
+  - first:
+      213: 6871264369326011067
+    second: tonchitilegrassmap_15
+  - first:
+      213: -5930947310387664734
+    second: tonchitilegrassmap_16
+  - first:
+      213: -4489254478966956198
+    second: tonchitilegrassmap_17
+  - first:
+      213: -7780173945662635320
+    second: tonchitilegrassmap_18
+  - first:
+      213: 1133585493131822593
+    second: tonchitilegrassmap_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tonchitilegrassmap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 868
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41daa9f480841d048963a14335a8e83a
+      internalID: 788353688622178650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 868
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222653dee6f9cf44db0504546a90cd34
+      internalID: -5602349889701511455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 868
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c3c62d0492bd648b0a3e235adabfda
+      internalID: 8207691953815996437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 868
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cc76f70b972a0438b604f8796b2aed
+      internalID: 5097987141092573603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 868
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9153d4910f8b0d5428f7fdd948706c97
+      internalID: -1197212622112342198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 836
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8460f247ac8b2e45a204416fc7d642d
+      internalID: -4791658423265251136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 836
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ca23ebb20b7884abd513084c44a44e
+      internalID: -1312627934111059481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 836
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7f60ac7fb01f14d86d9ccdb2fe1233
+      internalID: 7064567795700277403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 836
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a101e6d2c8d8c0a4d8cf70fceaddd804
+      internalID: 5025411414616895300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 836
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16eed5bd58484f438908959f3e36671
+      internalID: 4499498012075875369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 804
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412568b1fe5130e4380e17f7b3c7ec52
+      internalID: 2919586439718981636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 804
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab063f9895672344db73f58058ba237c
+      internalID: -2814978264617348575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 804
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c017310c6463a0d438093831f4e03804
+      internalID: -2763585555918175015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 804
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b981756ab6766c4186874e865617276
+      internalID: 3410133161622030680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 804
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04470bc683324f49bfaefd7f8558018
+      internalID: 5228896007085107424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 772
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2173001f1241e9149b958af2d4fa32d1
+      internalID: 6871264369326011067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 772
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea8a30219c781d4aa5eb8b79ddfaf12
+      internalID: -5930947310387664734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 772
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab23b45f66a6aa1478cb4dd9326eb96b
+      internalID: -4489254478966956198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tonchitilegrassmap_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 772
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bdf288fa42b51b41b8964848f7076b2
+      internalID: -7780173945662635320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
