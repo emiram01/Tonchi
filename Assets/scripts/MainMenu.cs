@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     {
         clip = new IntroLoop(menuMusic, 0f, 14.328f, 68.59f);
         clip.start();
+        Cursor.visible = true;
     }
 
     void Update()

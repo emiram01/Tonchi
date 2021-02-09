@@ -12,7 +12,6 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private GameObject space = null;
     [SerializeField] private PlayerMovement movement = null;
     [SerializeField] private GameObject face = null;
-    //[SerializeField] private GameObject previous = null;
     [SerializeField] private bool canDestroy = true;
     private int index = 0;
     private bool doneTyping;
@@ -49,7 +48,6 @@ public class Dialogue : MonoBehaviour
         FindObjectOfType<PlayerCombat>().canAtk = true;
         movement.canMove = true;
         face.SetActive(false);
-        //previous.SetActive(false);
         if(canDestroy)
         {
             stopper.enabled = false;

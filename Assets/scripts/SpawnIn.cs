@@ -5,13 +5,11 @@ using UnityEngine;
 public class SpawnIn : MonoBehaviour
 {
     [SerializeField] private GameObject stopper = null;
-    [SerializeField] private GameObject head = null;
     [SerializeField] private Collider2D stopper1 = null;
     [SerializeField] private GameObject zerg = null;
     [SerializeField] private GameObject boat = null;
     [SerializeField] private GameObject lokk = null;
     [SerializeField] private GameObject smoke = null;
-    [SerializeField] private Animator anim = null;
     [SerializeField] private AudioSource music = null;
     public IntroLoop clip;
     private bool playMusic = true;
@@ -39,7 +37,7 @@ public class SpawnIn : MonoBehaviour
         Destroy(boat.gameObject);
     }
     
-    IEnumerator Dead()
+    IEnumerator Smoke()
     {
         FindObjectOfType<PlayerMovement>().clip.stop();
         if(playMusic)
@@ -48,7 +46,6 @@ public class SpawnIn : MonoBehaviour
             playMusic = false;
         }
         yield return new WaitForSeconds(.5f);
-        head.SetActive(true);
         smoke.SetActive(true);
     }
 
@@ -57,9 +54,7 @@ public class SpawnIn : MonoBehaviour
         clip.checkTime();
         if(stopper1.enabled == false && end)
         {
-            FindObjectOfType<AudioManager>().Play("HeadDecap");
-            anim.SetBool("IsDead", true);
-            StartCoroutine("Dead");
+            StartCoroutine("Smoke");
             end = false;
         }
     }

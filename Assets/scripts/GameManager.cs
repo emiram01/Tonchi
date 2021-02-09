@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     {
         anim.SetTrigger("End");
         StartCoroutine("Intro");
+        Cursor.visible = false;
         if(instance == null)
         {
             instance = this;

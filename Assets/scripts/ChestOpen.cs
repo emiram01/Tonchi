@@ -31,6 +31,7 @@ public class ChestOpen : MonoBehaviour
 
     void Open()
     {
+        FindObjectOfType<AudioManager>().Play("DoorOpen");
         animator.SetBool("Open", true);
         this.enabled = false;
         top.GetComponent<Collider2D>().enabled = false;

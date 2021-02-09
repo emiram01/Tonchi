@@ -99,7 +99,7 @@ public class PlayerCombat : MonoBehaviour
             Collider2D[] hitFinal = Physics2D.OverlapCircleAll(this.transform.position, .7f, final);
             foreach(Collider2D enemy in hitFinal)
             {
-                enemy.gameObject.GetComponent<FinalZergActually>().hurt = true;
+                enemy.gameObject.GetComponent<ShipControls>().hit = true;
             }
             Collider2D[] hitChest = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, chestLayers);
             foreach(Collider2D chest in hitChest)
