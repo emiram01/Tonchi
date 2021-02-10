@@ -11,6 +11,7 @@ public class RegularDoor : MonoBehaviour
     [SerializeField] private float speed = 0f;
     private Vector3 posA;
     private Vector3 posB;
+    public bool canClose = true;
     public bool moveBack = false;
     private bool close = true;
     //private bool moveBack = false;
@@ -39,7 +40,7 @@ public class RegularDoor : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(player.position.x < this.transform.position.x && moveBack == false && player.position.y > posy) //&& moveBack == false)
+        if(player.position.x < this.transform.position.x && moveBack == false && player.position.y > posy && canClose)
         {
             Move();
         }

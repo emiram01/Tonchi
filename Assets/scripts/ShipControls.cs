@@ -7,16 +7,20 @@ public class ShipControls : MonoBehaviour
     [SerializeField] private GameObject alarm = null;
     [SerializeField] private GameObject col = null;
     [SerializeField] private GameObject colDia = null;
+    [SerializeField] private GameObject bossDoor1 = null;
+    [SerializeField] private GameObject bossDoor2 = null;
+    [SerializeField] private GameObject lock1 = null;
+    [SerializeField] private AudioSource siren = null;
     public bool hit = false;
-
-    void Start()
-    {
-        col.SetActive(false);
-    }
 
     IEnumerator Alarm()
     {
         yield return new WaitForSeconds(0f);
+        FindObjectOfType<SpawnIn2>().clip.stop();
+        siren.Play();
+        bossDoor1.GetComponent<RegularDoor>().canClose = true;
+        bossDoor2.GetComponent<RegularDoor>().canClose = true;
+        lock1.GetComponent<RegularDoor>().canClose = true;
         FindObjectOfType<AudioManager>().Play("alarm");
         FindObjectOfType<SpawnIn2>().clip.stop();
         alarm.SetActive(true);
@@ -26,9 +30,10 @@ public class ShipControls : MonoBehaviour
 
     void Update()
     {
-        if(hit == true)
+        if(hit)
         {
             StartCoroutine("Alarm");
+            hit = false;
         }
     }
 }
