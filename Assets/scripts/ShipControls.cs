@@ -10,6 +10,7 @@ public class ShipControls : MonoBehaviour
     [SerializeField] private GameObject bossDoor1 = null;
     [SerializeField] private GameObject bossDoor2 = null;
     [SerializeField] private GameObject lock1 = null;
+    [SerializeField] private GameObject lock2 = null;
     [SerializeField] private AudioSource siren = null;
     public bool hit = false;
 
@@ -18,9 +19,10 @@ public class ShipControls : MonoBehaviour
         yield return new WaitForSeconds(0f);
         FindObjectOfType<SpawnIn2>().clip.stop();
         siren.Play();
-        bossDoor1.GetComponent<RegularDoor>().canClose = true;
-        bossDoor2.GetComponent<RegularDoor>().canClose = true;
-        lock1.GetComponent<RegularDoor>().canClose = true;
+        bossDoor1.GetComponent<RegularDoor>().canCloseL = true;
+        bossDoor2.GetComponent<RegularDoor>().canCloseL = true;
+        lock1.GetComponent<RegularDoor>().canCloseL = true;
+        lock2.GetComponent<RegularDoor>().canCloseR = true;
         FindObjectOfType<AudioManager>().Play("alarm");
         FindObjectOfType<SpawnIn2>().clip.stop();
         alarm.SetActive(true);

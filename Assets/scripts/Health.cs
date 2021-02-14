@@ -44,7 +44,6 @@ public class Health : MonoBehaviour
 
     IEnumerator Fade()
     {
-        //Color b = this.sprite.material.color;
         for(float i = 1f; i >= -0.05f; i -= 0.05f)
         {
             Color c = sprite.material.color;
@@ -53,13 +52,7 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(0.001f);
         }
         yield return new WaitForSeconds(0.2f);
-        //sprite.material.color = b;
     }
-    
-    // public void SavePlayer()
-    // {
-    //     GameManager.instance.currHealth = health;
-    // }
 
     void Update()
     {

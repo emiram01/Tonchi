@@ -38,10 +38,7 @@ public class PlayerPos : MonoBehaviour
 
     void SpawnIn()
     {
-        // Reland();
         gm.lastCheck = gm.spawnPoint;
         gm.Menu();
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //anim.SetTrigger("End");
     }
 }
