@@ -19,10 +19,8 @@ public class ZergFlyerBoss : MonoBehaviour
     [SerializeField] private GameObject hurt = null;
     [SerializeField] private GameObject zergFlyer = null;
     [SerializeField] private RegularDoor door = null;
-   //[SerializeField] private float speed = 0;
     [SerializeField] private AIPath aI = null;
     [SerializeField] private AudioSource bossMusic = null;
-    //private bool isActive;
     private bool canTakeDam = true;
     private int currentHealth;
     private float fr;
@@ -39,11 +37,6 @@ public class ZergFlyerBoss : MonoBehaviour
         clip = new IntroLoop(bossMusic, 0f, 21.6f, 44f);
     }
 
-    // void Move()
-    // {
-    //     transform.position = Vector2.MoveTowards(this.transform.position, player.position, speed * Time.deltaTime);
-    // }
-
     public void TakeDamage(int damage)
     {
         if(canTakeDam)
@@ -53,7 +46,6 @@ public class ZergFlyerBoss : MonoBehaviour
             animator.SetTrigger("Hurt");
             if(currentHealth <= 0)
             {
-                //isActive = false;
                 aI.enabled = false;
                 animator.SetBool("IsDead", true);
                 Invoke("Die", 0f);
@@ -76,7 +68,6 @@ public class ZergFlyerBoss : MonoBehaviour
         door.MoveBack();
         FindObjectOfType<PlayerMovement>().isDJumpActive = true;
         FindObjectOfType<CharacterController2D>().isDJumpActive = true;
-        //this.gameObject.SetActive(false);
     }
 
     void CheckIfTimeToFire()
@@ -102,10 +93,7 @@ public class ZergFlyerBoss : MonoBehaviour
         if(distance <= lookRadius)
         {
             UI.SetActive(true);
-            //isActive = true;
             aI.enabled = true;
-            //Move();
-            //animator.SetBool("IsActive", true);
             if(playMusic)
             {
                 FindObjectOfType<PlayerMovement>().clip.stop();

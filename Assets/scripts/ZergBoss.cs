@@ -25,7 +25,6 @@ public class ZergBoss : MonoBehaviour
     [SerializeField] private float moveSpeed = 0f;
     [SerializeField] private GameObject bar = null;
     [SerializeField] private AudioSource bossMusic = null;
-    
     private float fr;
     private float nextFire;
     private int currentHealth;
