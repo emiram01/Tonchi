@@ -170,3 +170,6 @@ MonoBehaviour:
   bossLayers3:
     serializedVersion: 2
     m_Bits: 16384
+  finalZerg:
+    serializedVersion: 2
+    m_Bits: 131072

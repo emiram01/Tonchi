@@ -17,8 +17,7 @@ public class TonchiLaser : MonoBehaviour
     [SerializeField] private LayerMask bossLayers = 0;
     [SerializeField] private LayerMask bossLayers2 = 0;
     [SerializeField] private LayerMask bossLayers3 = 0;
-    //private float curr = 0;
-    //private float nextDam = 1;
+    [SerializeField] private LayerMask finalZerg = 0;
 
     void Start()
     {
@@ -48,6 +47,7 @@ public class TonchiLaser : MonoBehaviour
         transform.eulerAngles = rotation;
 	}
 
+    //Not the best way to do attacks, will change for future projects
     void Update()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(this.transform.position, range, enemyLayers);
@@ -96,6 +96,13 @@ public class TonchiLaser : MonoBehaviour
         foreach(Collider2D chest in hitChest)
         {
             chest.gameObject.GetComponent<ChestOpen>().TakeDamage(damage);
+            //ScreenShake.Instance.Shake(1f, .2f);
+            DestroyLaser();
+        }
+        Collider2D[] hitFinalZerg = Physics2D.OverlapCircleAll(this.transform.position, range, finalZerg);
+        foreach(Collider2D enemy in hitFinalZerg)
+        {
+            enemy.gameObject.GetComponent<FinalZerg>().TakeDamage(damage);
             //ScreenShake.Instance.Shake(1f, .2f);
             DestroyLaser();
         }

@@ -16,6 +16,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private LayerMask bossLayers2 = 0;
     [SerializeField] private LayerMask bossLayers3 = 0;
     [SerializeField] private LayerMask final = 0;
+    [SerializeField] private LayerMask finalZerg = 0;
     public bool canAtk = true;
     private bool isAttacking = false;
     private int attackCounter = 0;
@@ -58,6 +59,7 @@ public class PlayerCombat : MonoBehaviour
 	    lastAttack = Time.deltaTime;
     }
 
+    //This is probably not a good way to do attacks, will change method for future projects
     void Attack(int index)
     {
         isAttacking = true;
@@ -105,6 +107,11 @@ public class PlayerCombat : MonoBehaviour
             foreach(Collider2D chest in hitChest)
             {
                 chest.gameObject.GetComponent<ChestOpen>().TakeDamage(attackDamage);
+            }
+            Collider2D[] hitFinalZerg = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, finalZerg);
+            foreach(Collider2D enemy in hitFinalZerg)
+            {
+                enemy.gameObject.GetComponent<FinalZerg>().TakeDamage(attackDamage);
             }
         }
         return;

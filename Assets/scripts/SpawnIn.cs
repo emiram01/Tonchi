@@ -11,6 +11,7 @@ public class SpawnIn : MonoBehaviour
     [SerializeField] private GameObject lokk = null;
     [SerializeField] private GameObject smoke = null;
     [SerializeField] private AudioSource music = null;
+    [SerializeField] private GameObject cam = null;
     public IntroLoop clip;
     private bool playMusic = true;
     private  bool end = true;
@@ -34,6 +35,7 @@ public class SpawnIn : MonoBehaviour
         stopper.SetActive(true);
         zerg.SetActive(true);
         lokk.SetActive(true);
+        cam.SetActive(true);
         Destroy(boat.gameObject);
     }
     
