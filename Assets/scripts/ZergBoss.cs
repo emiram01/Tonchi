@@ -152,7 +152,6 @@ public class ZergBoss : MonoBehaviour
         canTakeDam = false;
         animator.SetBool("IsAttacking", true);
         dust.Play();
-        // atk.SetActive(true);
         StartCoroutine("AttackDam");
         StartCoroutine("Attack2");
         yield return new WaitForSeconds(7);
