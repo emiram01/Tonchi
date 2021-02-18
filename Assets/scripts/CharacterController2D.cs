@@ -9,7 +9,6 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private bool m_AirControl = false;
 	[SerializeField] private LayerMask m_WhatIsGround = 0;
 	[SerializeField] private Transform m_GroundCheck = null;
-	//[SerializeField] private Transform m_CeilingCheck = null;
 	[SerializeField] private Collider2D m_CrouchDisableCollider = null;
 	[SerializeField] private float coyoteTime = .2f;
 	[SerializeField] private float jumpBufferlen = .1f;
@@ -76,10 +75,6 @@ public class CharacterController2D : MonoBehaviour
 			dJump = true;
 			dJumpCheck = false;
 			this.GetComponent<PlayerCombat>().enabled = true;
-			// if(Input.GetKeyDown(KeyCode.Space))
-			// {
-			// 	//FindObjectOfType<PlayerCombat>();
-			// }
 		}
 		else
 		{
@@ -87,10 +82,6 @@ public class CharacterController2D : MonoBehaviour
 			m_Grounded = false;
 			this.GetComponent<PlayerCombat>().enabled = false;
 		}
-		// if(!m_Grounded)
-		// {
-		// 	FindObjectOfType<PlayerMovement>().IsDashActive();
-		// }
 	}
 
 	public void Dust()
@@ -100,16 +91,6 @@ public class CharacterController2D : MonoBehaviour
 
 	public void Move(float move, bool crouch, bool jump)
 	{
-		// // If crouching, check to see if the character can stand up
-		// if (crouch)
-		// {
-		// 	//If the character has a ceiling preventing them from standing up, keep them crouching
-		// 	if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-		// 	{
-		// 		crouch = true;
-		// 	}
-		// }
-
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
@@ -181,7 +162,6 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.AddForce(new Vector2(0f, newJ));
 			dJump = false;
 		}
-		//dJumpCheck = false;
 	}
 
 	private void Flip()

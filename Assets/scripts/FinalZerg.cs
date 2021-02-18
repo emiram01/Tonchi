@@ -5,6 +5,8 @@ using UnityEngine;
 public class FinalZerg : MonoBehaviour
 {
     [SerializeField] private Collider2D stopper1 = null;
+    [SerializeField] private CircleCollider2D flyColl = null;
+    [SerializeField] private Collider2D coll = null;
     [SerializeField] private GameObject UI = null;
     [SerializeField] private Animator animator = null;
     [SerializeField] private int maxHealth = 1500;
@@ -25,8 +27,6 @@ public class FinalZerg : MonoBehaviour
     [SerializeField] private GameObject waller4 = null;
     [SerializeField] private GameObject flyer1 = null;
     [SerializeField] private GameObject flyer2 = null;
-    [SerializeField] private GameObject roller1 = null;
-    [SerializeField] private GameObject roller2 = null;
     [SerializeField] private GameObject bossDoor1 = null;
     [SerializeField] private GameObject bossDoor2 = null;
     [SerializeField] private GameObject splat1 = null;
@@ -38,13 +38,13 @@ public class FinalZerg : MonoBehaviour
     [SerializeField] private AudioSource bossMusic = null;
     [SerializeField] private float fireRate = 0;
     public bool canTakeDam = false;
+    public IntroLoop clip;
     private int waypointIndex = 0;
     private float fr;
     private float nextFire;
     private int currentHealth;
     private bool isActive = false;
     private bool end = true;
-    private IntroLoop clip;
     private bool playMusic = true;
     private bool move = true;
     private bool move2 = true;
@@ -92,7 +92,7 @@ public class FinalZerg : MonoBehaviour
     void SpawnSpike()
     {
         GameObject spike = Instantiate(spikes) as GameObject;
-        spike.transform.position = target.transform.position;
+        spike.transform.position = new Vector2(target.transform.position.x, 270.385f);
     }
 
     void CheckIfTimeToFire()
@@ -169,10 +169,6 @@ public class FinalZerg : MonoBehaviour
             waller3.GetComponent<Zerg>().TakeDamage(200, 0 , 0);
         if(waller4.activeInHierarchy)
             waller4.GetComponent<Zerg>().TakeDamage(200, 0 , 0);
-        if(roller1.activeInHierarchy)
-            roller1.GetComponent<ZergRollerDam>().TakeDamage(200);
-        if(roller2.activeInHierarchy)
-            roller2.GetComponent<ZergRollerDam>().TakeDamage(200);
         if(flyer1.activeInHierarchy)
             flyer1.GetComponent<ZergFly>().TakeDamage(200);
         if(flyer2.activeInHierarchy)
@@ -225,24 +221,27 @@ public class FinalZerg : MonoBehaviour
 
         if(currentHealth <= 500)
         {
-            roller1.SetActive(true);
-            roller2.SetActive(true);
             if(move2)
             {
                 StartCoroutine("Move2");
                 move2 = false;
             }
-            Movement();
         }
     }
 
     IEnumerator Move()
     {
+        atk1 = false;
         shoot1 = true;
         canTakeDam = false;
         animator.SetBool("Flying", true);
+        coll.enabled = false;
+        flyColl.enabled = true;
         fr -= 1.5f;
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(29);
+        coll.enabled = true;
+        flyColl.enabled = false;
+        atk1 = true;
         canTakeDam = true;
         shoot1 = false;
         animator.SetBool("Flying", false);
@@ -251,15 +250,22 @@ public class FinalZerg : MonoBehaviour
 
     IEnumerator Move2()
     {
-        shoot1 = true;
+        waypointIndex = 0;
+        atk1 = false;
+        shoot2 = true;
         canTakeDam = false;
         animator.SetBool("Flying", true);
+        coll.enabled = false;
+        flyColl.enabled = true;
         fr -= 1.5f;
-        yield return new WaitForSeconds(30);
+        yield return new WaitForSeconds(29);
+        coll.enabled = false;
+        flyColl.enabled = true;
+        atk1 = true;
         canTakeDam = true;
-        shoot1 = false;
+        shoot2 = false;
         animator.SetBool("Flying", false);
-        fr += 1.5f;
+        fr += .5f;
     }
 
     private void Movement()

@@ -18,22 +18,13 @@ public class SpawnIn2 : MonoBehaviour
 
     void Start()
     {
-        clip = new IntroLoop(music, 0f, 0f, 22.5f);
-    }
-
-    void Update()
-    {
-        clip.checkTime();
-        if(stopper1.enabled == false && end)
-        {
-            StartCoroutine("Relocate");
-            end = false;
-        }
+        clip = new IntroLoop(music, 0f, 0f, 21.9f);
     }
 
     IEnumerator Relocate()
     {
         trans.SetTrigger("Start");
+        FindObjectOfType<Health>().health = 9;
         blackTonchi.SetActive(true);
         bed1.SetActive(false);
         bed2.SetActive(true);
@@ -47,5 +38,15 @@ public class SpawnIn2 : MonoBehaviour
         tonchi.transform.position = spawn.position;
         yield return new WaitForSeconds(2f);
         trans.SetTrigger("End");
+    }
+
+    void Update()
+    {
+        clip.checkTime();
+        if(stopper1.enabled == false && end)
+        {
+            StartCoroutine("Relocate");
+            end = false;
+        }
     }
 }

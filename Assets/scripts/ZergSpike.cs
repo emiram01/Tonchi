@@ -8,23 +8,13 @@ public class ZergSpike : MonoBehaviour
     [SerializeField] private Animator animator = null;
     [SerializeField] private Collider2D coll = null;
     private GameObject target;
-    private Vector2 seek;
 
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
         coll.enabled = false;
         StartCoroutine("Attack");
-        // if(target != null)
-        // {
-        //     SeekTarget();
-        // }
     }
-
-    // private void SeekTarget()
-    // {
-    //     this.transform.position = target.transform.position;
-    // }
 
     IEnumerator Attack()
     {

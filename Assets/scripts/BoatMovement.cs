@@ -6,6 +6,7 @@ public class BoatMovement : MonoBehaviour
 {
     [SerializeField] private Vector3 velocity = default;
     [SerializeField] private Rigidbody2D rb = null;
+    [SerializeField] private bool boat1 = true;
     private Vector2 startPos;
     private bool moving;
 
@@ -43,7 +44,7 @@ public class BoatMovement : MonoBehaviour
         {
             transform.position += (velocity * Time.deltaTime);
         }
-        if(rb.position.x < 195f)
+        if(rb.position.x < 195f && boat1)
         {
             moving = false;
         }
