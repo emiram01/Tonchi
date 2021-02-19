@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rb = null;
+    [SerializeField] public Rigidbody2D rb = null;
     [SerializeField] private Animator transition = null;
     [SerializeField] private Animator transition2 = null;
     [SerializeField] private CharacterController2D controller = null;
@@ -13,13 +13,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject background = null;
     [SerializeField] private GameObject background2 = null;
     [SerializeField] private GameObject background3 = null;
-    [SerializeField] private float runSpeed = 40f;
+    [SerializeField] public float runSpeed = 40f;
     [SerializeField] private float dashSpeed = 0f;
     [SerializeField] private float dashTime = 0f;
     [SerializeField] private float startDashTime = 0f;
     [SerializeField] private float dash = 0f;
     [SerializeField] private Transform lasSpawn = null;
-    //[SerializeField] private TrailRenderer tr = null;
     [SerializeField] private GameObject shootimg = null;
     [SerializeField] private GameObject dashimg = null;
     [SerializeField] private GameObject dJumpimg = null;
@@ -36,19 +35,16 @@ public class PlayerMovement : MonoBehaviour
     private bool dead = false;
     private GameManager gm;
     private bool playMusic = true;
-    //private int doubleJump;
 
     void Start()
     {
         dashTime = startDashTime;
         gm = FindObjectOfType<GameManager>();
         clip = new IntroLoop(music, 0f, 13.33f, 87f);
-        //doubleJump = 2;
     }
 
     void Update()
     {
-        //Dash();
         clip.checkTime();
         if(canMove)
         {
@@ -69,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
             }
             if(Input.GetButtonDown("Jump"))
             {
-                //doubleJump--;
                 jump = true;
                 animator.SetBool("IsJumping", true);
             }
@@ -106,15 +101,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!controller.m_Grounded && !crouch && Input.GetKey(KeyCode.Space) && dashTime <= 0 && !animator.GetBool("IsShooting"))
         {
-            //controller.Dust();
-            //DashAnim();
             FindObjectOfType<ProgressBar>().IsDashActive();
             FindObjectOfType<AudioManager>().Play("Woosh");
             animator.SetBool("IsDashing", true);
             animator.SetBool("IsJumping", false);
             StartCoroutine("DashMove");
             dashTime = startDashTime;
-            //dashActive = false;
         }
         else
         {
@@ -135,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsDashing", false);
         animator.SetBool("IsShooting", false);
         animator.SetBool("IsDJumping", false);
-        //dashActive = false;
     }
 
     void OnCrouching(bool isCrouching)
@@ -194,23 +185,6 @@ public class PlayerMovement : MonoBehaviour
             dJumpimg.SetActive(true);
             DJump();
         }
-        // if(controller.dJumpCheck)
-        // {
-        //     animator.SetBool("IsJumping", false);
-        //     //animator.SetBool("IsDashing", false);
-        //     //animator.SetBool("IsShooting", false);    
-        //     animator.SetBool("IsDJumping", true);
-        // }
-        // if(rb.position.y < -30f)
-        // {
-        //     DeathCheck();
-        //     // if (dead == false)
-        //     // {
-        //     //     FindObjectOfType<Health>().SubHealth(1);
-        //     //     FindObjectOfType<PlayerPos>().Reland();
-        //     // }
-        //     // dead = true;
-        // }
         if(rb.position.y < 60f && rb.position.x < 520)
         {
             background.SetActive(true);

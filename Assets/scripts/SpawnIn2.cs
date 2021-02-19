@@ -24,11 +24,11 @@ public class SpawnIn2 : MonoBehaviour
     IEnumerator Relocate()
     {
         trans.SetTrigger("Start");
-        FindObjectOfType<Health>().health = 9;
         blackTonchi.SetActive(true);
         bed1.SetActive(false);
         bed2.SetActive(true);
         yield return new WaitForSeconds(1f);
+        FindObjectOfType<Health>().health = 9;
         FindObjectOfType<SpawnIn>().clip.stop();
         if(playMusic)
         {

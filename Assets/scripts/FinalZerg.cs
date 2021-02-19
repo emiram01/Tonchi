@@ -37,6 +37,7 @@ public class FinalZerg : MonoBehaviour
     [SerializeField] private Transform[] waypoints = null;
     [SerializeField] private AudioSource bossMusic = null;
     [SerializeField] private float fireRate = 0;
+    public bool isDead = false;
     public bool canTakeDam = false;
     public IntroLoop clip;
     private int waypointIndex = 0;
@@ -71,10 +72,19 @@ public class FinalZerg : MonoBehaviour
             animator.SetTrigger("Hurt");
             if(currentHealth <= 0)
             {
+                FindObjectOfType<PlayerMovement>().runSpeed = 0f;
+                FindObjectOfType<PlayerMovement>().rb.velocity = Vector2.zero;
+                FindObjectOfType<PlayerMovement>().rb.angularVelocity = 0f;
+                FindObjectOfType<PlayerMovement>().rb.Sleep();
+                FindObjectOfType<PlayerMovement>().canMove = false;
+                isDead = true;
                 splat1.SetActive(true);
                 splat2.SetActive(true);
                 splat3.SetActive(true);
+                animator.SetBool("Tired", false);
                 animator.SetBool("Dead", true);
+                clip.stop();
+                FindObjectOfType<AudioManager>().Play("HeadDecap");
                 Invoke("Die", 1f);
             }
         }
@@ -158,7 +168,6 @@ public class FinalZerg : MonoBehaviour
 
     void Die()
     {  
-        clip.stop();
         dead.SetActive(true);
         GetComponent<Collider2D>().enabled = false;
         if(waller1.activeInHierarchy)
@@ -174,7 +183,6 @@ public class FinalZerg : MonoBehaviour
         if(flyer2.activeInHierarchy)
             flyer2.GetComponent<ZergFly>().TakeDamage(200);
         this.enabled = false;
-        Destroy(this.gameObject);
         UI.SetActive(false);
     }
 
@@ -199,13 +207,13 @@ public class FinalZerg : MonoBehaviour
                 CheckIfTimeToFire2();
         }
 
-        if(currentHealth <= 1000)
+        if(currentHealth <= 800)
         {
             waller1.SetActive(true);
             waller4.SetActive(true);
         }
 
-        if(currentHealth <= 800)
+        if(currentHealth <= 600)
         {
             if(move)
             {
@@ -219,7 +227,7 @@ public class FinalZerg : MonoBehaviour
             flyer2.SetActive(true);
         }
 
-        if(currentHealth <= 500)
+        if(currentHealth <= 200)
         {
             if(move2)
             {
@@ -238,7 +246,7 @@ public class FinalZerg : MonoBehaviour
         coll.enabled = false;
         flyColl.enabled = true;
         fr -= 1.5f;
-        yield return new WaitForSeconds(29);
+        yield return new WaitForSeconds(29.7f);
         coll.enabled = true;
         flyColl.enabled = false;
         atk1 = true;
@@ -258,14 +266,13 @@ public class FinalZerg : MonoBehaviour
         coll.enabled = false;
         flyColl.enabled = true;
         fr -= 1.5f;
-        yield return new WaitForSeconds(29);
-        coll.enabled = false;
-        flyColl.enabled = true;
-        atk1 = true;
+        yield return new WaitForSeconds(29.7f);
+        coll.enabled = true;
+        flyColl.enabled = false;
         canTakeDam = true;
         shoot2 = false;
         animator.SetBool("Flying", false);
-        fr += .5f;
+        animator.SetBool("Tired", true);
     }
 
     private void Movement()
