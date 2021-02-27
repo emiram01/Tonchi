@@ -21,6 +21,9 @@ public class FinalZerg : MonoBehaviour
     [SerializeField] private Transform pos4 = null;
     [SerializeField] private Transform pos5 = null;
     [SerializeField] private Transform pos6 = null;
+    [SerializeField] private GameObject roller1 = null;
+    [SerializeField] private GameObject roller2 = null;
+    [SerializeField] private GameObject roller3 = null;
     [SerializeField] private GameObject waller1 = null;
     [SerializeField] private GameObject waller2 = null;
     [SerializeField] private GameObject waller3 = null;
@@ -170,6 +173,12 @@ public class FinalZerg : MonoBehaviour
     {  
         dead.SetActive(true);
         GetComponent<Collider2D>().enabled = false;
+        if(roller1.activeInHierarchy)
+            roller1.GetComponent<ZergRollerDam>().TakeDamage(200);
+        if(roller2.activeInHierarchy)
+            roller2.GetComponent<ZergRollerDam>().TakeDamage(200);
+        if(roller3.activeInHierarchy)
+            roller3.GetComponent<ZergRollerDam>().TakeDamage(200);
         if(waller1.activeInHierarchy)
             waller1.GetComponent<Zerg>().TakeDamage(200, 0 , 0);
         if(waller2.activeInHierarchy)

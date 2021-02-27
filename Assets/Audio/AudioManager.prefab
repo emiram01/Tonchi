@@ -100,7 +100,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Chat
     clip: {fileID: 8300000, guid: addd7fddfcd010e42b29a33a3f895eba, type: 3}
-    volume: 0.2
+    volume: 0.12
     pitch: 2
     loop: 0
     source: {fileID: 0}
