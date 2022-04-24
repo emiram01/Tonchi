@@ -12,8 +12,7 @@ Credits for the sound effects goes to [SoundBible](https://soundbible.com/).
 
 ## 🎞 Demo
 
-https://user-images.githubusercontent.com/67139085/164956002-de51112e-6143-485a-b3ca-2383bb8e25bb.mp4
-
+https://user-images.githubusercontent.com/67139085/164956916-27b9d231-9ea4-4be8-8e1e-8d14d203b847.mp4
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://emilianoramirez.com/)
