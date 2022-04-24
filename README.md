@@ -1,4 +1,4 @@
-![Logo](https://emilianoramirez.com/images/TonchiLogo.png)
+# Tonchi
 
 ## 📝 About
 
