@@ -1,6 +1,6 @@
 ![Logo](https://emilianoramirez.com/images/TonchiLogo.png)
 
-## About
+## 📝 About
 
 Tonchi is a 2D action platformer based on my cat.
 
@@ -10,9 +10,10 @@ Models and animations made by me using [Krita](https://krita.org/en/), a free op
 Credits for the sound effects goes to [SoundBible](https://soundbible.com/).
 
 
-## Demo
+## 🎞 Demo
 
-https://emilianoramirez.com/videos/TonchiReel.mp4
+https://user-images.githubusercontent.com/67139085/164956002-de51112e-6143-485a-b3ca-2383bb8e25bb.mp4
+
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://emilianoramirez.com/)
